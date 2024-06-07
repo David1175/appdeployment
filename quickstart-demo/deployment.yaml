@@ -1,20 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: demoapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: nginx
+      app: demoapp
   template:
     metadata:
       labels:
-        run: nginx
+        app: demoapp
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: demoapp
+        image: davidooo/pipeline-demoapplicatie:1.0.0-9
+        resources:
+          limits:
+            memory:"265Mi"
+            cpu:"500m"
         ports:
-          - containerPort: 80
-        imagePullPolicy: IfNotPresent
+          - containerPort: 8080
+        
