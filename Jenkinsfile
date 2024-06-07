@@ -16,7 +16,7 @@ pipeline{
         
         stage("Checkout from SCM"){
             steps {
-                git branch:'main', credentialsId: 'github-pat', url: 'https://github.com/David1175/Appdeployment'
+                git branch:'main', credentialsId: 'github', url: 'https://github.com/David1175/Appdeployment'
             }
         }
 
@@ -40,7 +40,7 @@ pipeline{
                    git add deployment.yaml
                    git commit -m "Updated Deployment Manifest"
                 """
-                withCredentials([gitUsernamePassword(credentialsId: 'github-pat', gitToolName: 'Default')]) {
+                withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
                   sh "git push https://github.com/David1175/Appdeployment main"
                 }
             }
