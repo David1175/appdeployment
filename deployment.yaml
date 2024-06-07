@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-  name: pipeline-demoapplicatie:1.0.0-16
+  name: pipeline-demoapp
 spec:
   replicas: 2
   selector:
