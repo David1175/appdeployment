@@ -18,8 +18,8 @@ spec:
         image: davidooo/pipeline-demoapplicatie:1.0.0-9
         resources:
           limits:
-            memory:"265Mi"
-            cpu:"500m"
+            memory: "265Mi"
+            cpu: "500m"
         ports:
           - containerPort: 8080
         
