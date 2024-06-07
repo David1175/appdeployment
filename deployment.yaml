@@ -2,20 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/instance: demoapp
-  name: demoapp
+  name: pipeline-demoapplicatie
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: demoapp
+      app: pipeline-demoapplicatie
   template:
     metadata:
       labels:
-        app: demoapp
+        app: pipeline-demoapplicatie
     spec:
       containers:
-      - name: demoapp
+      - name: pipeline-demoapplicatie
         image: davidooo/pipeline-demoapplicatie:1.0.0-9
         resources:
           limits:

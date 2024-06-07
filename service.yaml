@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demoapp
+  name: pipeline-demoapplicatie
   labels:
-    app: demoapp
+    app: pipeline-demoapplicatie
 spec:
   ports:
   - port: 8080
@@ -11,6 +11,6 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: demoapp
+    app: pipeline-demoapplicatie
   type: LoadBalancer
 
