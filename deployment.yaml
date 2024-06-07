@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-  name: pipeline-demoapplicatie
+  name: pipeline-demoapplicatie:1.0-14
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pipeline-demoapplicatie
+      app: pipeline-demoapplicatie:1.0-14
   template:
     metadata:
       labels:
-        app: pipeline-demoapplicatie
+        app: pipeline-demoapplicatie:1.0-14
     spec:
       containers:
-      - name: pipeline-demoapplicatie
-        image: davidooo/pipeline-demoapplicatie:1.0
+      - name: pipeline-demoapplicatie:1.0-14
+        image: davidooo/pipeline-demoapplicatie:1.0-14
         resources:
           limits:
             memory: "265Mi"
