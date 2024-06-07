@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pipeline-demoapp
-        image: davidooo/pipeline-demoapplicatie:1.0.0-16
+        image: davidooo/pipeline-demoapplicatie:1.0.0-17
         resources:
           limits:
             memory: "265Mi"
