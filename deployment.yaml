@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-  name: pipeline-demoapplicatie:1.0-14
+  name: pipeline-demoapplicatie
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pipeline-demoapplicatie:1.0-14
+      app: pipeline-demoapplicatie
   template:
     metadata:
       labels:
-        app: pipeline-demoapplicatie:1.0-14
+        app: pipeline-demoapplicatie
     spec:
       containers:
-      - name: pipeline-demoapplicatie:1.0-14
+      - name: pipeline-demoapplicatie
         image: davidooo/pipeline-demoapplicatie:1.0-14
         resources:
           limits:
