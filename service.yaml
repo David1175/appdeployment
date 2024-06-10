@@ -12,5 +12,4 @@ spec:
     name: http
   selector:
     app: pipeline-demoapplicatie
-  type: LoadBalancer
-
+  type: ClusterIP
